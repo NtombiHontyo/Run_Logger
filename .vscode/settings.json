@@ -1,0 +1,10 @@
+{
+    "C_Cpp.default.compilerPath": "cl.exe",
+    "files.associations": {
+        "*.ejs": "html",
+        "string": "cpp",
+        "format": "cpp",
+        "iostream": "cpp",
+        "iosfwd": "cpp"
+    }
+}
