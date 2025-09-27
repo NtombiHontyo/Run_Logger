@@ -17,6 +17,7 @@ public:
     int day;
     int month;
 
+    //All the information needed for a run entry
     Run_Entry(int dist, int p, int cal, int hr, int t)
     {
         distance = dist;
@@ -33,7 +34,6 @@ public:
     }
     void display_entry()
     {
-        // tm_mon is 0-11
         cout << "Run Entry Details:" << endl;
 
         cout << "Date: " << day << "/" << month << endl;
@@ -43,11 +43,12 @@ public:
         cout << "Average heart rate: " << avg_heart_rate << " bpm" << endl;
         cout << "Time: " << time << " minutes" << endl;
     }
+    //Takes the filename as a parameter and appends the run entry to the CSV file
     void save_to_csv(const string& filename)
     {
         bool file_exists = false;
 
-    // First check if file already has content
+    
     ifstream infile(filename);
     if (infile.good() && infile.peek() != ifstream::traits_type::eof()) {
         file_exists = true;
@@ -56,7 +57,7 @@ public:
 
     ofstream file(filename, ios::app);
 
-    // Write header only if file was empty
+    
     if (!file_exists) {
         file << "Date,Distance (km),Pace (s/km),Calories (kcal),Avg Heart Rate (bpm),Time (min)\n";
     }
@@ -71,6 +72,7 @@ public:
     }
 };
 
+// Class to summarize all runs from the CSV file
 class Run_Summary {
 private:
     long total_distance = 0;
@@ -88,7 +90,7 @@ public:
         }
 
         string line;
-        getline(file, line); // skip header
+        getline(file, line); 
 
         while (getline(file, line)) {
             stringstream ss(line);
@@ -136,6 +138,7 @@ public:
 
 int main()
 {
+    //Main menu for user interaction. There are two options: enter a new run or view the summary of all runs
     cout << "Welcome to the Run Tracker!" << endl;
     int userChoice;
     cout << "What would you like to do? " << endl;
@@ -144,7 +147,6 @@ int main()
     cin >> userChoice;
     if (userChoice == 1)
     {
-        /* code */
         int distance;
         int pace;
         int calories;
