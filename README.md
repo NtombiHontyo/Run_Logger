@@ -8,7 +8,7 @@ I am entry level runner and I enjoy seeing my progress. This keeps me motivated 
 
 
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/EWYgs-FK-C4)
 
 # Development Environment
 
@@ -18,14 +18,12 @@ C++ with a number of libraries such as ctime, chrono, etc.
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
+
 
 - [W3Schools](https://www.w3schools.com/cpp/cpp_constructors.asp)
 
 
 # Future Work
-
-{Make a list of things that you need to fix, improve, and add in the future.}
 
 - a GUI
 - Creating other ways to sum up the info such as an average heartbeat
